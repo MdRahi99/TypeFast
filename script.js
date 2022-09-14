@@ -101,6 +101,7 @@ const closeModal = () => {
 
 const start = () => {
   // If already started, do not start again
+  // if (startTime) return;
   if (startTime) return;
 
   let count = 3;
@@ -113,7 +114,7 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
